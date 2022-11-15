@@ -1,0 +1,9 @@
+// Watch Sass :  sass --watch assets/style/scss/style.scss:assets/style/css/style.css
+
+@import "./base/reset.scss";
+@import "./base/txt.scss";
+@import "./base/button.scss";
+
+body{
+    background-color:var(--color-background);
+}
