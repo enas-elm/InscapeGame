@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AxeCD from '../views/AxeCD.vue'
 import AxeDev from '../views/AxeDev.vue'
 import AxeTroisD from '../views/AxeTroisD.vue'
-
+import Success from '../views/Success.vue'
 
 const routes =[
     {
@@ -25,6 +25,11 @@ const routes =[
       path: '/axetroisd',
       name: 'axetroisd',
       component: AxeTroisD
+    },
+    {
+      path: '/success',
+      name: 'success',
+      component: Success
     },
   ]
 

@@ -4,6 +4,7 @@
 @import "./base/txt.scss";
 @import "./base/button.scss";
 
-body{
-    background-color:var(--color-background);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
