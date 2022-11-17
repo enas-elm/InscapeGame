@@ -6,13 +6,15 @@
     <div class="flex">
 
       <div>
-        <div class="axe-list" v-for="axe in axes" v-bind:key="axe.id" v-on:click="chosenAxe(axe.id)" >
+        <div class="axe-list " v-for="axe in axes" v-bind:key="axe.id" v-on:click="chosenAxe(axe.id)"  :class="{ 'axe-select' : counter === axe.id || counter > 5 }" >
           <img  :src='`src/assets/img/${axe.img}`' alt="">
           <p>{{axe.name}}</p>
         </div>
       </div>
 
-      <img class="axes-img" :src='`src/assets/img/${sceneImg}`' alt="Jeu">
+      <img v-if="counter <=5" class="axes-img" :src='`src/assets/img/${sceneImg}`' alt="Jeu">
+      <video  v-if="counter >5" class="axes-img" autoplay src="src/assets/img/porte.mp4"></video>
+      
   </div>
   </div>
 </template>
@@ -90,7 +92,21 @@ methods: {
 
 
 <style lang="scss" scoped>
+.axe-select {
+  cursor:pointer;
+  opacity: 1 !important;
 
+  p{
+    transition: all 0.2s ease-out;
+  }
+  &:hover{
+    p{
+    font-size: 1.75rem;
+  }
+    img {
+    width: 2.75rem;
+  }}
+}
 .axes-img{
   border:solid #fa9339 1px;
     box-shadow: 0 0 15px var(--main);
@@ -102,19 +118,10 @@ methods: {
   display: flex;
   align-items: center;
   gap: 20px;
-  cursor:pointer;
+  opacity: 0.5;
   margin: 15px auto;
   font-size: 1.5rem;
-  p{
-    transition: all 0.2s ease-out;
-  }
-  &:hover{
-    p{
-    font-size: 1.75rem;
-  }
-    img {
-    width: 2.75rem;
-  }}
+
   img {
     width: 2.5rem;
     height: auto;
