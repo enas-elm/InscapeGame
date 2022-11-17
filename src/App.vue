@@ -15,6 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap');
 :root{
   --main: #FF7600;
+  --main-lighter: #FFA500;
 }
 
 
@@ -31,7 +32,8 @@
 }
 .title{
   font-family: 'Bungee', cursive;
-  color: var(--main);
+  color: var(--main)  ;
+  text-shadow: 0 0 4px var(--main) ;
 }
 
 h1{
@@ -69,10 +71,19 @@ h1{
   color:black;
   width: fit-content;
   padding: 10px 30px;
+  margin-top: 10px;
   display: flex;
   font-weight: 600;
   float:right;
   font-size: 1.25rem;
+  box-shadow: 0 0 10px var(--main) ;
+  transition: all 0.1s ease-out;
+  &:hover{
+    box-shadow: 0 0 20px var(--main) ;
+  }
+  &:active{
+    box-shadow: 0 0 20px var(--main-lighter) ;
+  }
 }
 
 a{

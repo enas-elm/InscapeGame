@@ -6,13 +6,14 @@
                 <p class="txt">Mission</p>
                 <p class="reussie">Accomplie</p>
                 <p class="txt">Tu as obtenu ton bracelet</p>
-                <router-link to="/jouer" class="button left">Continuer</router-link>
 
             </div>
         </div>
         <hr>
     </div>
-
+    <div class="w-container axe-container-right">
+        <router-link to="/jouer" class="button">Continuer</router-link>
+    </div>
 
 </template>
 
@@ -72,6 +73,10 @@ export default{
     margin-top: 20px;
     float: left;
 }
-
+.axe-container-right{
+    width: 50%;
+    margin: 0 auto;
+    flex-direction: column;
+}
 
 </style>

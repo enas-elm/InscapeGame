@@ -74,16 +74,16 @@ input[type=text] {
   color: white;
   border-radius: 40px;
   border: 2px solid var(--main) !important;
+  transition: all 0.1s ease-out;
+  &:hover {
+    box-shadow: 0 0 10px var(--main) ;
+  }
   &:focus {
-    border: 2px solid var(--main) !important;
+    box-shadow: 0 0 20px var(--main) ;
   }
 }
 
 
-.left{
-
-}
-  
 
   
 </style>
