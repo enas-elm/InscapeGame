@@ -6,11 +6,11 @@
         <label class="title" for="reponse">Ta réponse</label>
         <input class="response" name="reponse" type="text" v-model="inputResponse" placeholder="..."/>
         <div class="left">
-        <div class="button-verify" v-on:click="verify(inputResponse)">Valider</div>
+        <div class="button" v-on:click="verify(inputResponse)">Valider</div>
       </div>
     </form>
 
-    <p>{{message}}</p>
+    <p v-if="help==true">{{indice}}</p>
     <p>{{counter}}</p>
     </div>
 </template>
@@ -23,23 +23,26 @@ export default {
 name:'Question',
 data() {
   return {
+    help: false,
     counter: 0,
-    message:"",
   }
 },
 props: {
   reponse: String,
+  indice: String,
 },
 methods: {
   verify(inputResponse){
     if (inputResponse == this.reponse) {
-      this.message = "Bonne réponse";
+      window.location.href = 'success';
       this.counter++;
+      // this.$emit("message", "I changed the message");
     }
     else{
-      this.message = "Réessaie"
+      this.help = true;
     }
   },
+
 
 },
 
@@ -63,15 +66,6 @@ input[type=text] {
   }
 }
 
-.button-verify{
-  border-radius: 40px;
-  background-color: var(--main);
-  color:black;
-  width: fit-content;
-  padding: 10px 30px;
-  display: flex;
-  font-weight: 500;
-}
 
 .left{
 

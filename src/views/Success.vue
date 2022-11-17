@@ -1,22 +1,41 @@
 <template>
     <div class="success-bg">
         <div class="success-div">
-            <img src="@/assets/img/tlou.jpg" alt="">
+            <img src="@/assets/img/tlou.jpg" alt="Bracelet">
             <div>
                 <p class="txt">Mission</p>
-                <p class="reussie">Réussie</p>
+                <p class="reussie">Accomplie</p>
                 <p class="txt">Tu as obtenu ton bracelet</p>
             </div>
         </div>
+        <hr>
+    </div>
+
+    <div class="w-container">
+        <router-link to="/jouer" class="button">Continuer</router-link>
     </div>
 </template>
 
+
+<script>
+export default{
+    name: 'Success',
+    data(){
+        return{
+            response: '',
+        }
+    },
+}
+</script>
 <style lang="scss">
 .success-bg{
-    background: rgb(255, 255, 255, 0.2) ;
+    // transform: rotate(-5deg);
     line-height: 1.2;
     display: flex;
     align-items: center;
+    margin-top: 10vh;
+    // top:50vh;
+    max-width: 100%;
     img{
         border-radius: 100%;
         height: 300px;
@@ -29,16 +48,23 @@
         align-items: center;
         gap:50px;
     }
-}
-.txt{
+    .txt{
     color: white;   
     font-family: 'Bungee', cursive;
     font-size: 2rem;
+    }
+    .reussie{
+        font-family: 'Bungee', cursive;
+        color: var(--main);
+        font-size: 5rem;
+    }
+    hr{
+        position:absolute;
+        width: 100%;
+        border: 8rem solid rgba(108, 108, 108, 0.5);
+        z-index: -1;
+    }
 }
-.reussie{
-    font-family: 'Bungee', cursive;
-    color: var(--main);
-    font-size: 4rem;
-}
+
 
 </style>
