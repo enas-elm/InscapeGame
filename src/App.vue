@@ -34,6 +34,7 @@ h1{
   margin-bottom: 10px;
   font-family: 'Bungee', cursive;
   color: var(--main);
+  // text-shadow: 0 0 10px #fa9339;
 }
 
 #nav{
@@ -73,6 +74,13 @@ a{
   text-decoration: none;
   color: black;
 }
+
+.axe-container{
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+  }
 
 
 </style> 

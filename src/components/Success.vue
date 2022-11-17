@@ -6,27 +6,28 @@
                 <p class="txt">Mission</p>
                 <p class="reussie">Accomplie</p>
                 <p class="txt">Tu as obtenu ton bracelet</p>
-                <p>{{axeImg}}</p>
+                <router-link to="/jouer" class="button left">Continuer</router-link>
+
             </div>
         </div>
         <hr>
     </div>
 
-    <div class="w-container">
-        <router-link to="/Jouer" class="button">Continuer</router-link>
-    </div>
+
 </template>
 
 
 <script>
 export default{
     name: 'Success',
-    props:{ 
-        axeImg: String,
+    data(){
+        return{
+            response: '',
+        }
     },
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .success-bg{
     // transform: rotate(-5deg);
     line-height: 1.2;
@@ -60,9 +61,13 @@ export default{
     hr{
         position:absolute;
         width: 100%;
-        border: 7rem solid rgba(108, 108, 108, 0.5);
+        border: 8rem solid rgba(108, 108, 108, 0.5);
         z-index: -1;
     }
+}
+.left{
+    margin-top: 20px;
+    float: left;
 }
 
 

@@ -2,29 +2,35 @@
     <div>
 
 
-    <form>
+    <form class="axe-container">
         <label class="title" for="reponse">Ta réponse</label>
+        <p v-if="help==true">{{indice}}</p>
         <input class="response" name="reponse" type="text" v-model="inputResponse" placeholder="..."/>
         <div class="left">
-        <div class="button" v-on:click="verify(inputResponse)">Valider</div>
+        <div v-if="correct==false">
+          <div  class="button " v-on:click="verify(inputResponse)">Valider</div>
+        </div>
+
       </div>
     </form>
 
-    <p v-if="help==true">{{indice}}</p>
-    <p>{{counter}}</p>
+    <Success v-if="correct==true" v-bind:axeImg="axeImg"/>
     </div>
 </template>
 
 
 
 <script>
-
+import Success from '@/components/Success.vue' 
 export default {
 name:'Question',
+components:{
+  Success
+},
 data() {
   return {
     help: false,
-    counter: 0,
+    correct: false,
   }
 },
 props: {
@@ -34,8 +40,9 @@ props: {
 methods: {
   verify(inputResponse){
     if (inputResponse == this.reponse) {
-      window.location.href = 'success';
-      this.counter++;
+      // window.location.href = 'success';
+      this.correct=true;
+      // this.help = false;
       // this.$emit("message", "I changed the message");
     }
     else{
@@ -70,5 +77,7 @@ input[type=text] {
 .left{
 
 }
+  
+
   
 </style>

@@ -1,15 +1,12 @@
 <template>
 
-  <div class="container" >
+  <div >
     <h1 class="title">Coding & Digital Innovation</h1>
-    <h2 class="title">Mission 2</h2>
-    <p>{{question}}</p>
-    <Questionaxe v-bind:reponse="reponse" v-bind:indice="indice" />
-    <!-- <Questionaxe v-bind:reponse="reponse" v-bind:indice="indice"  @message="setMessage"/> -->
-    
+    <h2 class="title axe-container">Mission 2</h2>
+    <p class="axe-container">{{question}}</p>
+    <Questionaxe v-bind:reponse="reponse" v-bind:indice="indice" /> 
   </div>
-<!-- {{msg}} -->
-  <!-- <Success   v-bind:axeImg="axeImg"/> -->
+
 </template>
 
 <script>
@@ -46,18 +43,9 @@ export default{
 body {
   background-color: black; 
   // background: url('src/assets/img/bg-dev.png') no-repeat center fixed ;
-
   color:white;
   justify-content: center;
-
-
 }
-.container{
-    width: 50%;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-  }
 
 </style>
 
