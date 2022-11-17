@@ -1,5 +1,7 @@
 <template>
-    <div class="flex w-container">
+    <div class="flex w-container gap" >
+        <!-- :style="{'background-image':'url(src/assets/img/bg-rules.jpg)'}" -->
+        <img class="home-img" src="src/assets/img/perso.png" alt="Image">
         <div>
             <h1>IIMSCAPE GAME</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim nunc vitae tortor malesuada tempus. 
@@ -12,9 +14,10 @@
                     <router-link class="button play" to="/jouer">Jouer</router-link>
                 </div>
         </div>
-        <img src="src/assets/img/tlou.jpg" alt="Image">
+
     </div>
 </template>
+
 
 <style lang="scss">
 
@@ -26,5 +29,20 @@
 .play{
     float: none;
     margin-top: 20px;
+}
+.home-img{
+    width: 15%;
+    height: auto;
+}
+.gap{
+    width:80%;
+    gap: 20%;
+}
+body{
+//   background:  url("src/assets/img/bg-rules.jpg") no-repeat bottom fixed ;
+//   background-size: 100%;
+  
+//   filter: grayscale(100%);
+//   backdrop-filter: blur(10px);
 }
 </style>

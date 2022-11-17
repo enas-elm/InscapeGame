@@ -1,32 +1,34 @@
 <template>
 
   <div >
-    <h1 class="title">Création & Design</h1>
-    <h2 class="title axe-container">Mission 2</h2>
-    <p class="axe-container">{{question}}</p>
-    <p class="axe-container help" v-if="help==true">{{indice}}</p>
+    <div v-if="correct==false">
+      <h1 class="title">{{title}}</h1>
+      <h2 class="title axe-container">Mission {{id}}</h2>
+      <p class="axe-container">{{question}}</p>
+      <p class="axe-container help" v-if="help==true">{{indice}}</p>
 
-    <div class="cd-select">
-      <div class="personnages">
-        <div class="cd-perso">
-          <img src="src/assets/img/perso1.png" alt="Personnage">
-          <input type="radio" id="one" value="one" v-model="picked" />
-          <label for="one">Un</label>
+      <div class="cd-select">
+        <div class="personnages">
+          <div class="cd-perso">
+            <img src="src/assets/img/perso1.png" alt="Personnage">
+            <input type="radio" id="one" value="one" v-model="picked" />
+            <label for="one">Super Héros 1</label>
+          </div>
+
+          <div class="cd-perso">
+            <img src="src/assets/img/perso2.png" alt="Personnage">
+            <input type="radio" id="two" value="two" v-model="picked" />
+            <label for="two">Super Héros 2</label>
+          </div>
         </div>
 
-        <div class="cd-perso">
-          <img src="src/assets/img/perso2.png" alt="Personnage">
-          <input type="radio" id="two" value="two" v-model="picked" />
-          <label for="two">Deux</label>
+        <div>
+          <div class="button" v-on:click="verifyCd(picked)">Valider</div>
         </div>
-      </div>
-
-      <div v-if="correct==false">
-        <div class="button" v-on:click="verifyCd(picked)">Valider</div>
       </div>
     </div>
 
-    <Success v-if="correct==true"/>
+    <Success v-if="correct==true" v-bind:bracelet="bracelet"/>
   </div>
 
 </template>
@@ -50,6 +52,13 @@ components:{
       picked: '',
       help: false,
       correct: false,
+
+      id: 1,
+      title:"Création & Design",
+      question:"Un allié a besoin de votre emplacement exacte pour vous envoyer un colis qui vous aidera Un QR Code est caché dans l’école… cegrgtr grg re vhiebhib er zhibeviebvi eviebiv eijv eizbviebgviuebgoer",
+ 
+      bracelet:"bracelet_crea.png",
+
     }
   },
   methods:{

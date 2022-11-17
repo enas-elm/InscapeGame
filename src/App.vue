@@ -1,11 +1,12 @@
 <template>
     
+    <div class="all">
     <div id="nav" class="w-container">
       <router-link to="/jouer"><img id="logo" src="@/assets/img/logo.png" alt="Logo"></router-link>
       <router-link to="/">Règles</router-link>
     </div>
     <router-view/>
-
+  </div>
 </template>
 
 
@@ -16,6 +17,7 @@
   --main: #FF7600;
 }
 
+
 *{
   margin: 0;
   padding: 0;
@@ -24,6 +26,9 @@
   font-family: 'Sono', sans-serif;
 }
 
+.all{
+  margin-bottom: 50px;
+}
 .title{
   font-family: 'Bungee', cursive;
   color: var(--main);
@@ -81,7 +86,14 @@ a{
     margin: 0 auto;
     flex-direction: column;
   }
-
+  .flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 50px;
+  align-items: center;
+}
 
 </style> 
 

@@ -1,21 +1,10 @@
 <template>
-   <div class="axe-container" >
-    <h1 class="title">Animation 3D</h1>
-    <h2 class="title">Mission 2</h2>
-    <p>{{question}}</p>
-    <Questionaxe v-bind:reponse="reponse" v-bind:indice="indice" />    
-  </div>
-</template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+  <div >
+    <Questionaxe v-bind:id="id" v-bind:title="title" v-bind:question="question" v-bind:reponse="reponse" v-bind:indice="indice" v-bind:bracelet="bracelet"/> 
+  </div>
+
+</template>
 
 <script>
 import Questionaxe from '@/components/Questionaxe.vue' 
@@ -30,14 +19,30 @@ export default{
 },
   data(){
     return{
+      id: 4,
+      title:"Animation 3D",
       question:"Un allié a besoin de votre emplacement exacte pour vous envoyer un colis qui vous aidera Un QR Code est caché dans l’école… cegrgtr grg re vhiebhib er zhibeviebvi eviebiv eijv eizbviebgviuebgoer",
-      reponse: "B",
-      indice:"Indice 3D",
-      axeImg:"deeeev",
-      counter: 0,
-      msg: "zzzzz"
+      reponse: "A",
+      indice:"Indice dev",
+      bracelet:"bracelet_3D.png",
     }
   },
+  // methods: {
+  //   setMessage(msg) {
+  //               this.msg = msg;
+  //           }
+  //       }
 }
 </script>
+
+<style lang="scss">
+
+body {
+  background-color: black; 
+  // background: url('src/assets/img/bg-dev.png') no-repeat center fixed ;
+  color:white;
+  justify-content: center;
+}
+
+</style>
 

@@ -19,7 +19,6 @@
 
 <script>
 
-
 export default {
 name: 'App',
 data() {
@@ -90,21 +89,14 @@ methods: {
 </script>
 
 
-<style lang="scss">
-.flex{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 50px;
-  gap: 50px;
-  align-items: center;
-  img:nth-child(2){
-    width: 50%;
-    height: 50%;
-    border:solid #fa9339 1px;
+<style lang="scss" scoped>
+
+.axes-img{
+  border:solid #fa9339 1px;
     box-shadow: 0 0 15px var(--main);
     border-radius: 8px;
-  }
+    width: 50%;
+    height: 100%;
 }
 .axe-list{
   display: flex;
@@ -129,6 +121,8 @@ methods: {
     transition: all 0.2s ease-out;
   }
 }
-
+body {
+  background-color: #f5f5f5 !important;
+}
 
 </style>

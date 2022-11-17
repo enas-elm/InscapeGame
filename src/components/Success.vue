@@ -1,7 +1,7 @@
 <template>
     <div class="success-bg">
         <div class="success-div">
-            <img src="@/assets/img/tlou.jpg" alt="Bracelet">
+            <img :src='`src/assets/img/${bracelet}`' alt="Bracelet">
             <div>
                 <p class="txt">Mission</p>
                 <p class="reussie">Accomplie</p>
@@ -25,6 +25,9 @@ export default{
             response: '',
         }
     },
+    props: {
+     bracelet: String,
+},
 }
 </script>
 <style lang="scss" scoped>

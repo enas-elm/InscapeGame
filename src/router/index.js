@@ -8,7 +8,7 @@ import AxeDev from '../views/AxeDev.vue'
 import AxeTroisD from '../views/AxeTroisD.vue'
 import AxeJV from '../views/AxeJV.vue'
 
-import Success from '../views/Success.vue'
+// import Success from '../views/Success.vue'
 
 const routes =[
   {
@@ -46,11 +46,11 @@ const routes =[
       name: 'axecdeb',
       component: AxeCDEB
     },
-    {
-      path: '/success',
-      name: 'success',
-      component: Success
-    },
+    // {
+    //   path: '/success',
+    //   name: 'success',
+    //   component: Success
+    // },
   ]
 
 const router = createRouter({

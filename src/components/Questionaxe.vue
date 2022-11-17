@@ -1,20 +1,23 @@
 <template>
     <div>
 
-
+    <div  v-if="correct==false">
+    <h1 class="title">Coding & Digital Innovation</h1>
+    <h2 class="title axe-container">Mission {{id}}</h2>
+    <p class="axe-container">{{question}}</p>
     <form class="axe-container">
         <label class="title" for="reponse">Ta réponse</label>
         <p v-if="help==true">{{indice}}</p>
         <input class="response" name="reponse" type="text" v-model="inputResponse" placeholder="..."/>
         <div class="left">
-        <div v-if="correct==false">
+        <div>
           <div  class="button " v-on:click="verify(inputResponse)">Valider</div>
         </div>
 
       </div>
     </form>
-
-    <Success v-if="correct==true" v-bind:axeImg="axeImg"/>
+  </div>
+    <Success v-if="correct==true" v-bind:bracelet="bracelet"/>
     </div>
 </template>
 
@@ -34,12 +37,16 @@ data() {
   }
 },
 props: {
+  id: Number,
+  title: String,
+  question: String,
   reponse: String,
   indice: String,
+  bracelet: String,
 },
 methods: {
   verify(inputResponse){
-    if (inputResponse == this.reponse) {
+    if (inputResponse.trim().toLowerCase() == this.reponse.trim().toLowerCase()) {
       // window.location.href = 'success';
       this.correct=true;
       // this.help = false;
@@ -49,7 +56,6 @@ methods: {
       this.help = true;
     }
   },
-
 
 },
 

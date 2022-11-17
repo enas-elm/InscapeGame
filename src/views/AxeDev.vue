@@ -1,10 +1,7 @@
 <template>
 
   <div >
-    <h1 class="title">Coding & Digital Innovation</h1>
-    <h2 class="title axe-container">Mission 2</h2>
-    <p class="axe-container">{{question}}</p>
-    <Questionaxe v-bind:reponse="reponse" v-bind:indice="indice" /> 
+    <Questionaxe v-bind:id="id" v-bind:title="title" v-bind:question="question" v-bind:reponse="reponse" v-bind:indice="indice" v-bind:bracelet="bracelet"/> 
   </div>
 
 </template>
@@ -22,12 +19,12 @@ export default{
 },
   data(){
     return{
+      id: 3,
+      title:"Coding & Digital Innovation",
       question:"Un allié a besoin de votre emplacement exacte pour vous envoyer un colis qui vous aidera Un QR Code est caché dans l’école… cegrgtr grg re vhiebhib er zhibeviebvi eviebiv eijv eizbviebgviuebgoer",
       reponse: "A",
       indice:"Indice dev",
-      axeImg:"deeeev",
-      counter: 0,
-      msg: "zzzzz"
+      bracelet:"bracelet_dev.png",
     }
   },
   // methods: {
