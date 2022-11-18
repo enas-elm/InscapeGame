@@ -1,6 +1,10 @@
 
 <template>
-
+        <div class="all bg-jouer">
+        <div id="nav" class="w-container">
+      <router-link to="/jouer"><img id="logo" src="@/assets/img/logo.png" alt="Logo"></router-link>
+      <router-link to="/">Règles</router-link>
+      </div>
   <div class="w-container">
     <h1  v-on:click="turn(counter)" class="title">DEVIENS LE HÉROS DE L’ÈRE DU DIGITAL</h1>
     <div class="flex">
@@ -17,6 +21,7 @@
       
   </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -129,7 +134,12 @@ methods: {
   }
 }
 body {
-  background-color: #f5f5f5 !important;
+  background-color: #f5f5f5 ;
+}
+
+.bg-jouer{
+  background: url("src/assets/img/bg-rules.png") no-repeat center fixed ;
+   background-size: contain;
 }
 
 </style>

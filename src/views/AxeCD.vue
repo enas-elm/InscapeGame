@@ -1,5 +1,10 @@
 <template>
 
+<div class="all bg-cd">
+        <div id="nav" class="w-container">
+      <router-link to="/jouer"><img id="logo" src="@/assets/img/logo.png" alt="Logo"></router-link>
+      <router-link to="/">Règles</router-link>
+      </div>
   <div >
     <div v-if="correct==false">
       <h1 class="title">{{title}}</h1>
@@ -30,7 +35,7 @@
 
     <Success v-if="correct==true" v-bind:bracelet="bracelet"/>
   </div>
-
+</div>
 </template>
 
 <script>
@@ -75,7 +80,11 @@ components:{
 </script>
 
 <style lang="scss">
-
+.bg-cd{
+  // background-image:;
+   background: url("src/assets/img/bg-crea.png") no-repeat center fixed ;
+   background-size: contain;
+}
 body {
   background-color: black; 
   // background: url('src/assets/img/bg-dev.png') no-repeat center fixed ;

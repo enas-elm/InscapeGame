@@ -1,9 +1,13 @@
 <template>
-
+<div class="all bg-dev">
+        <div id="nav" class="w-container">
+      <router-link to="/jouer"><img id="logo" src="@/assets/img/logo.png" alt="Logo"></router-link>
+      <router-link to="/">Règles</router-link>
+      </div>
   <div >
     <Questionaxe v-bind:id="id" v-bind:title="title" v-bind:question="question" v-bind:reponse="reponse" v-bind:indice="indice" v-bind:bracelet="bracelet"/> 
   </div>
-
+</div>
 </template>
 
 <script>
@@ -21,9 +25,9 @@ export default{
     return{
       id: 3,
       title:"Coding & Digital Innovation",
-      question:"Un allié a besoin de votre emplacement exacte pour vous envoyer un colis qui vous aidera Un QR Code est caché dans l’école… cegrgtr grg re vhiebhib er zhibeviebvi eviebiv eijv eizbviebgviuebgoer",
-      reponse: "A",
-      indice:"Indice dev",
+      question:"Un allié souhaIte vous envoyer un Présent qui vous sera d'une aide précieuse. Communiquer lui votre adresse.",
+      reponse: "89.30.29.68",
+      indice:"Indice: Rechercher votre Adresse IP",
       bracelet:"bracelet_dev.png",
     }
   },
@@ -36,7 +40,11 @@ export default{
 </script>
 
 <style lang="scss">
-
+.bg-dev{
+  // background-image:;
+   background: url("src/assets/img/bg-dev.png") no-repeat center fixed ;
+   background-size: cover;
+}
 body {
   background-color: black; 
   // background: url('src/assets/img/bg-dev.png') no-repeat center fixed ;

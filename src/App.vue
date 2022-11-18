@@ -1,12 +1,12 @@
 <template>
     
-    <div class="all">
+    <!-- <div class="all">
     <div id="nav" class="w-container">
       <router-link to="/jouer"><img id="logo" src="@/assets/img/logo.png" alt="Logo"></router-link>
       <router-link to="/">Règles</router-link>
-    </div>
+    </div> -->
     <router-view/>
-  </div>
+  <!-- </div> -->
 </template>
 
 
@@ -24,14 +24,16 @@
   padding: 0;
   font-weight: 400;
   box-sizing: border-box;
-  font-family: 'Sono', sans-serif;
+  font-family: 'Sono', sans-serif !important;
 }
 
 .all{
   margin-bottom: 50px;
+  height:100vh;
+  padding-top: 50px;
 }
 .title{
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', cursive !important;
   color: var(--main)  ;
   text-shadow: 0 0 4px var(--main) ;
 }
@@ -39,13 +41,13 @@
 h1{
   text-align: center;
   margin-bottom: 10px;
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', cursive !important;
   color: var(--main);
   // text-shadow: 0 0 10px #fa9339;
 }
 
 #nav{
-  margin: 20px auto;
+  padding: 20px auto;
   display: flex;
   align-items: center;
   a{

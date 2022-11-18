@@ -3,8 +3,8 @@
         <div class="success-div">
             <img :src='`src/assets/img/${bracelet}`' alt="Bracelet">
             <div>
-                <p class="txt">Mission</p>
-                <p class="reussie">Accomplie</p>
+                <p class="txt ">Mission</p>
+                <p class="reussie title">Accomplie</p>
                 <p class="txt">Tu as obtenu ton bracelet</p>
 
             </div>
@@ -40,6 +40,7 @@ export default{
     margin-top: 10vh;
     // top:50vh;
     max-width: 100%;
+    backdrop-filter: blur(50px);
     img{
         border-radius: 100%;
         height: 300px;

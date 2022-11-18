@@ -1,9 +1,14 @@
 <template>
+<div class="all bg-troisd">
+        <div id="nav" class="w-container">
+      <router-link to="/jouer"><img id="logo" src="@/assets/img/logo.png" alt="Logo"></router-link>
+      <router-link to="/">Règles</router-link>
+      </div>
 
   <div >
     <Questionaxe v-bind:id="id" v-bind:title="title" v-bind:question="question" v-bind:reponse="reponse" v-bind:indice="indice" v-bind:bracelet="bracelet"/> 
   </div>
-
+</div>
 </template>
 
 <script>
@@ -21,9 +26,9 @@ export default{
     return{
       id: 4,
       title:"Animation 3D",
-      question:"Un allié a besoin de votre emplacement exacte pour vous envoyer un colis qui vous aidera Un QR Code est caché dans l’école… cegrgtr grg re vhiebhib er zhibeviebvi eviebiv eijv eizbviebgviuebgoer",
-      reponse: "A",
-      indice:"Indice dev",
+      question:"Trouve le code dans la scène",
+      reponse: "3dissocool",
+      indice:"",
       bracelet:"bracelet_3D.png",
     }
   },
@@ -36,7 +41,10 @@ export default{
 </script>
 
 <style lang="scss">
-
+.bg-troisd{
+  // background: url("src/assets/img/bg-dev.png") no-repeat center fixed ;
+   background-size: cover;
+}
 body {
   background-color: black; 
   // background: url('src/assets/img/bg-dev.png') no-repeat center fixed ;

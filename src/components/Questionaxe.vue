@@ -2,7 +2,7 @@
     <div>
 
     <div  v-if="correct==false">
-    <h1 class="title">Coding & Digital Innovation</h1>
+    <h1 class="title">{{title}}</h1>
     <h2 class="title axe-container">Mission {{id}}</h2>
     <p class="axe-container">{{question}}</p>
     <form class="axe-container">
