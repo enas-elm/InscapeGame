@@ -52,7 +52,7 @@ components:{
     return{
       question:"Un allié a besoin de votre emplacement exacte pour vous envoyer un colis qui vous aidera Un QR Code est caché dans l’école… cegrgtr grg re vhiebhib er zhibeviebvi eviebiv eijv eizbviebgviuebgoer",
       reponse: "one",
-      indice:"Indice cd",
+      indice:"Réessaie",
       axeImg:"deeeev",
       picked: '',
       help: false,
@@ -60,7 +60,7 @@ components:{
 
       id: 1,
       title:"Création & Design",
-      question:"Un allié a besoin de votre emplacement exacte pour vous envoyer un colis qui vous aidera Un QR Code est caché dans l’école… cegrgtr grg re vhiebhib er zhibeviebvi eviebiv eijv eizbviebgviuebgoer",
+      question:"Super H'IIM cherche une nouvelle couleur de tenue ! Il aimerait respecter les thèmes suivants : bien-être, joie, ambition. A toi de jouer !",
  
       bracelet:"bracelet_crea.png",
 

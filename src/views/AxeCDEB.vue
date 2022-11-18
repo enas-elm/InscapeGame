@@ -6,6 +6,7 @@
       </div>
   <div >
     <Questionaxe v-bind:id="id" v-bind:title="title" v-bind:question="question" v-bind:reponse="reponse" v-bind:indice="indice" v-bind:bracelet="bracelet"/> 
+  <!-- <img src="src/assets/img/enigme-cdeb.jpg" alt=""> -->
   </div>
 </div>
 </template>
@@ -25,9 +26,9 @@ export default{
     return{
       id: 5,
       title:"Communication Digitale & E-Business",
-      question:"Cherhcer un QR code dans la salle",
+      question:"Trouver le QR Code dans le fond de l'image",
       reponse: "youtubeur",
-      indice:"",
+      indice:"Réessaie",
       bracelet:"bracelet_com.png",
     }
   },
@@ -41,7 +42,7 @@ export default{
 
 <style lang="scss">
 .bg-cdeb{
-  background: url("src/assets/img/bg-cdeb.jpg") no-repeat center fixed ;
+  background: url("src/assets/img/enigme-cdeb.jpg") no-repeat center fixed ;
    background-size: cover;
 }
 body {

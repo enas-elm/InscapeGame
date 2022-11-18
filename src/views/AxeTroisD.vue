@@ -28,7 +28,7 @@ export default{
       title:"Animation 3D",
       question:"Trouve le code dans la scène",
       reponse: "3dissocool",
-      indice:"",
+      indice:"Réessaie",
       bracelet:"bracelet_3D.png",
     }
   },

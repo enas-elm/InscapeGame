@@ -6,17 +6,17 @@
       <router-link to="/">Règles</router-link>
       </div>
   <div class="w-container">
-    <h1  v-on:click="turn(counter)" class="title">DEVIENS LE HÉROS DE L’ÈRE DU DIGITAL</h1>
+    <h1 class="title">DEVIENS LE HÉROS DE L’ÈRE DU DIGITAL</h1>
     <div class="flex">
 
       <div>
         <div class="axe-list " v-for="axe in axes" v-bind:key="axe.id" v-on:click="chosenAxe(axe.id)"  :class="{ 'axe-select' : counter === axe.id || counter > 5 }" >
-          <img  :src='`src/assets/img/${axe.img}`' alt="">
+          <img    :src='`src/assets/img/${axe.img}`' alt="">
           <p>{{axe.name}}</p>
         </div>
       </div>
 
-      <img v-if="counter <=5" class="axes-img" :src='`src/assets/img/${sceneImg}`' alt="Jeu">
+      <img  v-on:click="turn(counter)" v-if="counter <=5" class="axes-img" :src='`src/assets/img/${sceneImg}`' alt="Jeu">
       <video  v-if="counter >5" class="axes-img" autoplay src="src/assets/img/porte.mp4"></video>
       
   </div>

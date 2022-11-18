@@ -10,12 +10,7 @@
         <img class="home-img" src="src/assets/img/perso.png" alt="Image">
         <div>
             <h1 class="title">IIMSCAPE GAME</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim nunc vitae tortor malesuada tempus. 
-                Aliquam et lectus vitae dui congue vulputate. Aenean venenatis eros id volutpat suscipit. Vestibulum at consectetur sapien.
-                Aliquam laoreet ex sapien, sed porttitor tortor sodales eu. In quis tellus tempor, laoreet libero et, ultricies purus. 
-                Cras vehicula est sed neque mattis gravida. Pellentesque at velit non enim bibendum accumsan. Fusce malesuada viverra malesuada. 
-                Praesent a erat vehicula risus elementum volutpat. Vivamus lacinia scelerisque dolor, et aliquet sem suscipit quis.
-                Vivamus eget suscipit justo, nec sollicitudin sem. Class aptent taciti sociosqu ad litora torquent per conubia.</p>
+            <p>Bonjour et bienvenue à l’IIM, je suis super H’IIM qui vous guidera tout le long de votre mission. Vous êtes un jeune étudiant aspirant à travailler dans le monde du digital. 5 bracelets sont cachés au sein de l’école, vous avez donc une seule mission : obtenir ces bracelets en découvrant les différents axes qui vous permettront d’en sortir en véritable super héros du digital.</p>
                 <div class="center">
                     <router-link class="button play" to="/jouer">Jouer</router-link>
                 </div>

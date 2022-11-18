@@ -27,7 +27,7 @@ export default{
       title:"Jeux vidéos",
       question:"Accompli ta mission dans le jeu et rentre ta réponse finale",
       reponse: "1972",
-      indice:"",
+      indice:"Réssaie",
       bracelet:"bracelet_JV.png",
     }
   },
